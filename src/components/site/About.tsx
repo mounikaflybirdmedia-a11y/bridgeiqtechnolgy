@@ -67,31 +67,14 @@ const About = () => {
 
           <div>
             <p className="text-muted-foreground leading-relaxed text-base">
-              BridgeIQ Technologies is an IT services company that provides Consulting, Business Process
-              Outsourcing, Business Technology Services, Enterprise Application Services, Infrastructure
-              Management, and Product Engineering. Our services are spread across a range of strategic domains.
+              As companies rapidly strive to gain a competitive advantage, BridgeIQ Technologies help them to innovate and transform by leveraging our unique insights, differentiated services and flexible partnering models. We have helped our customers reduce operating costs and generate new revenue streams.
             </p>
             <p className="text-muted-foreground mt-4 leading-relaxed text-base">
-              As companies rapidly strive to gain a competitive advantage, we help them to innovate and
-              transform by leveraging our unique insights, differentiated services and flexible partnering
-              models. We have helped our customers reduce operating costs and generate new revenue streams.
+              BridgeIQ Technologies are dedicated to helping our clients grow through our combined business-IT knowledge, thoughtful innovation and global scale. Over the years, we have built expertise that runs broad and deep across almost every major industry so that we can anticipate client requirements and fulfill demand wherever it emerges.
             </p>
             <p className="text-muted-foreground mt-4 leading-relaxed text-base">
-              BridgeIQ are dedicated to helping our clients grow through combined business-IT knowledge,
-              thoughtful innovation and global scale. Over the years, we have built expertise that runs
-              broad and deep across almost every major industry.
+              From the front office through back office, and across the technology stack, we leverage the latest tools and techniques to deliver services faster, better and cheaper.
             </p>
-
-            <ul className="mt-8 grid sm:grid-cols-2 gap-3">
-              {points.map((p) => (
-                <li key={p} className="flex items-start gap-3">
-                  <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-brand shrink-0">
-                    <Check className="h-3 w-3 text-white" strokeWidth={3} />
-                  </span>
-                  <span className="text-sm text-foreground/80">{p}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
 

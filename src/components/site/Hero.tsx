@@ -38,7 +38,7 @@ const Hero = () => {
             </p>
 
             <ul className="flex flex-wrap gap-x-6 gap-y-3 justify-center lg:justify-start mb-10 animate-fade-up" style={{ animationDelay: "0.25s" }}>
-              {["Vetted IT talent", "48h average submission", "Nationwide reach"].map((f) => (
+              {["Vetted IT talent", "Direct client partnerships", "Nationwide reach"].map((f) => (
                 <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
                   <CheckCircle2 className="h-4 w-4 text-primary" />
                   {f}
@@ -71,32 +71,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-transparent" />
             </div>
 
-            {/* Floating stat card — bottom left */}
-            <div className="absolute -bottom-6 -left-6 card-elevated rounded-2xl p-5 border border-primary/20 shadow-glow hidden sm:block">
-              <div className="text-3xl font-bold text-gradient">500+</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Successful Placements</div>
-            </div>
-            {/* Floating stat card — top right */}
-            <div className="absolute -top-6 -right-6 card-elevated rounded-2xl p-5 border border-secondary/30 shadow-glow-purple hidden sm:block">
-              <div className="text-3xl font-bold text-gradient-purple">98%</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Client Retention</div>
-            </div>
           </div>
-        </div>
-
-        {/* Stat strip */}
-        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: "0.4s" }}>
-          {[
-            { k: "500+", v: "Placements", grad: "text-gradient" },
-            { k: "98%", v: "Client Retention", grad: "text-gradient-purple" },
-            { k: "48h", v: "Avg. Submission", grad: "text-gradient" },
-            { k: "50", v: "US States Served", grad: "text-gradient-purple" },
-          ].map((s) => (
-            <div key={s.v} className="text-center card-elevated rounded-2xl p-5 border border-border hover:border-primary/40 transition-smooth hover:shadow-glow">
-              <div className={`text-3xl md:text-4xl font-bold ${s.grad}`}>{s.k}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{s.v}</div>
-            </div>
-          ))}
         </div>
       </div>
     </section>

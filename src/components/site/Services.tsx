@@ -1,4 +1,5 @@
-import { UserSearch, Briefcase, Globe2, Cpu, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Cloud, Cpu, ShieldCheck, Code, Settings, ArrowUpRight } from "lucide-react";
 import recruitmentImg from "@/assets/service-recruitment-v3.png";
 import consultingImg from "@/assets/service-consulting.png";
 import outsourcingImg from "@/assets/service-outsourcing-v2.png";
@@ -6,36 +7,49 @@ import technologyImg from "@/assets/service-technology.png";
 
 const services = [
   {
-    icon: UserSearch,
-    title: "Recruitment Services",
-    desc: "The development of any organization relies upon the right talent. BridgeIQ follows strict procedures to source and place the brightest IT talent for any industry.",
-    points: ["Vetted technology professionals", "Contract & direct hire", "Nationwide reach"],
-    image: recruitmentImg,
-    imageAlt: "Professional IT recruitment and hiring",
-  },
-  {
-    icon: Briefcase,
-    title: "Consulting Services",
-    desc: "Our consulting services help clients achieve high performance by efficiently anticipating, meeting, and exceeding their workforce expectations.",
-    points: ["Workforce strategy", "Talent benchmarking", "Engagement models"],
-    image: consultingImg,
-    imageAlt: "Business consulting and workforce strategy",
-  },
-  {
-    icon: Globe2,
-    title: "Outsourcing Services",
-    desc: "Our outsourcing services are built to address the staffing necessities of clients across the United States with flexible, scalable delivery.",
-    points: ["Managed teams", "Offshore + onshore", "Dedicated pods"],
-    image: outsourcingImg,
-    imageAlt: "Global IT outsourcing and remote collaboration",
+    icon: Cloud,
+    title: "Cloud - Azure, SAP, AWS",
+    slug: "cloud-services",
+    desc: "We provide comprehensive cloud solutions across major platforms including Azure, SAP, and AWS, ensuring seamless migration, deployment, and management.",
+    points: ["Cloud Migration", "Architecture Design", "Managed Services"],
+    image: technologyImg,
+    imageAlt: "Cloud Services",
   },
   {
     icon: Cpu,
-    title: "Technology Solutions",
-    desc: "BridgeIQ recommends and implements leading technologies — from cloud and DevOps to data, AI, and cybersecurity — for enterprise clients.",
-    points: ["Cloud & DevOps", "Data & AI", "Cybersecurity"],
+    title: "Artificial Intelligence",
+    slug: "artificial-intelligence",
+    desc: "Leverage the power of AI to transform your business processes, enhance decision-making, and create innovative products.",
+    points: ["Machine Learning", "Predictive Analytics", "Natural Language Processing"],
+    image: consultingImg,
+    imageAlt: "Artificial Intelligence Services",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Engineering & Assurance",
+    slug: "quality-engineering",
+    desc: "Ensure software reliability and performance with our robust quality engineering and testing methodologies.",
+    points: ["Test Automation", "Performance Testing", "Security Testing"],
+    image: outsourcingImg,
+    imageAlt: "Quality Engineering & Assurance",
+  },
+  {
+    icon: Code,
+    title: "Application Services",
+    slug: "application-services",
+    desc: "End-to-end application services covering custom development, modernization, and maintenance to keep your business agile.",
+    points: ["Custom Development", "App Modernization", "Maintenance & Support"],
+    image: recruitmentImg,
+    imageAlt: "Application Services",
+  },
+  {
+    icon: Settings,
+    title: "DevOps",
+    slug: "devops",
+    desc: "Accelerate software delivery and improve operational efficiency with our continuous integration and deployment DevOps practices.",
+    points: ["CI/CD Pipelines", "Infrastructure as Code", "Continuous Monitoring"],
     image: technologyImg,
-    imageAlt: "Cloud technology and DevOps solutions",
+    imageAlt: "DevOps Services",
   },
 ];
 
@@ -54,13 +68,12 @@ const Services = () => {
           </h2>
           <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-brand" />
           <p className="text-muted-foreground mt-4 text-base">
-            BridgeIQ offers a focused set of services to help clients achieve the highest level of
-            satisfaction — from sourcing talent to delivering technology.
+            BridgeIQ Technologies is a top IT outsourcing company in USA. We have highly professional skilled engineers in business analysis, project leading and architecture designing and development management, etc.
           </p>
         </div>
 
         {/* Service cards — each with its own image */}
-        <div className="grid md:grid-cols-2 gap-8 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {services.map((s, idx) => (
             <article
               key={s.title}
@@ -96,12 +109,12 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#contact"
+                <Link
+                  to={`/services/${s.slug}`}
                   className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:gap-2 transition-all"
                 >
                   Read More <ArrowUpRight className="h-4 w-4" />
-                </a>
+                </Link>
               </div>
             </article>
           ))}

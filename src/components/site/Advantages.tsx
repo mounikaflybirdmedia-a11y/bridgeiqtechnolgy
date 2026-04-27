@@ -4,9 +4,9 @@ import advantagesImg from "@/assets/advantages.png";
 const advantages = [
   {
     icon: Clock,
-    title: "48-Hour Submissions",
-    desc: "Our active bench and intelligent matching engine delivers qualified candidates within 48 hours — dramatically reducing your time-to-hire.",
-    badge: "Speed",
+    title: "Direct Client Focus",
+    desc: "We work exclusively with direct clients, providing dedicated IT solutions and eliminating unnecessary layers in the staffing process.",
+    badge: "Focus",
   },
   {
     icon: ShieldCheck,
@@ -32,19 +32,6 @@ const advantages = [
     desc: "Specialized knowledge across BFSI, Healthcare, Retail, and Technology — we understand your industry and its unique talent demands.",
     badge: "Expertise",
   },
-  {
-    icon: UserCheck,
-    title: "98% Client Retention",
-    desc: "Our commitment to quality and partnership has earned us a 98% client retention rate, with hundreds of successful long-term placements.",
-    badge: "Proven",
-  },
-];
-
-const stats = [
-  { value: "500+", label: "Successful Placements", grad: "text-gradient" },
-  { value: "98%", label: "Client Retention Rate", grad: "text-gradient-purple" },
-  { value: "48h", label: "Avg. Submission Time", grad: "text-gradient" },
-  { value: "50", label: "US States Covered", grad: "text-gradient-purple" },
 ];
 
 const Advantages = () => {
@@ -67,19 +54,6 @@ const Advantages = () => {
             We combine creativity, analytical depth, and industry experience to deliver the best IT staffing
             and technology solutions — on time, every time.
           </p>
-        </div>
-
-        {/* Stats strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-20">
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              className="service-card rounded-2xl p-6 text-center"
-            >
-              <div className={`text-3xl md:text-4xl font-bold ${s.grad}`}>{s.value}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-2 font-medium">{s.label}</div>
-            </div>
-          ))}
         </div>
 
         {/* Main content: image + cards */}

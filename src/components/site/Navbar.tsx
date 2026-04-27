@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 import logo from "@/assets/bridgeiq-logo-new.jpeg";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#services", label: "Services" },
-  { href: "#about", label: "About" },
-  { href: "#advantages", label: "Advantages" },
-  { href: "#why", label: "Why Us" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
+  { href: "/#advantages", label: "Advantages" },
+  { href: "/careers", label: "Careers" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -29,7 +29,7 @@ const Navbar = () => {
       }`}
     >
       <nav className="container mx-auto flex h-20 items-center justify-between">
-        <a href="#home" className="flex items-center">
+        <a href="/#home" className="flex items-center">
           <img 
             src={logo} 
             alt="BridgeIQ Technologies logo" 
@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <div className="hidden md:block">
           <Button variant="hero" size="default" asChild>
-            <a href="#contact">Get Started</a>
+            <a href="/#contact">Get Started</a>
           </Button>
         </div>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
               </li>
             ))}
             <Button variant="hero" asChild>
-              <a href="#contact" onClick={() => setOpen(false)}>Get Started</a>
+              <a href="/#contact" onClick={() => setOpen(false)}>Get Started</a>
             </Button>
           </ul>
         </div>

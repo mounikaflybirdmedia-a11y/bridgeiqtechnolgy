@@ -3,8 +3,8 @@ import { Zap, Target, HeartHandshake, Globe2 } from "lucide-react";
 const features = [
   {
     icon: Zap,
-    title: "Speed",
-    desc: "Average time-to-submission of 48 hours, powered by an active bench and intelligent matching.",
+    title: "Direct Access",
+    desc: "We work directly with clients, ensuring transparent, efficient, and highly targeted IT solutions.",
   },
   {
     icon: Target,
