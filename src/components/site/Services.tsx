@@ -55,7 +55,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-28 relative bg-muted/40">
+    <section id="services" className="py-28 relative bg-muted/40 overflow-hidden">
       {/* Decorative blob */}
       <div className="absolute right-0 bottom-0 w-80 h-80 blob-circle opacity-60 pointer-events-none" />
 

@@ -25,7 +25,7 @@ const features = [
 
 const WhyUs = () => {
   return (
-    <section id="why" className="py-28 relative bg-muted/40">
+    <section id="why" className="py-28 relative bg-muted/40 overflow-hidden">
       {/* Decorative blob left */}
       <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-72 h-72 blob-circle pointer-events-none" />
 

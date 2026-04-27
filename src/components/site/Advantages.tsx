@@ -36,7 +36,7 @@ const advantages = [
 
 const Advantages = () => {
   return (
-    <section id="advantages" className="py-28 relative">
+    <section id="advantages" className="py-28 relative overflow-hidden">
       {/* Decorative blobs */}
       <div className="absolute top-0 right-0 w-96 h-96 blob-circle opacity-50 pointer-events-none" />
       <div className="absolute bottom-0 -left-20 w-72 h-72 blob-circle opacity-40 pointer-events-none" />

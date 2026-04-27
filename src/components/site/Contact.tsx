@@ -22,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-28 relative bg-muted/40">
+    <section id="contact" className="py-28 relative bg-muted/40 overflow-hidden">
       {/* Decorative blob */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-72 h-72 blob-circle opacity-60 pointer-events-none" />
 

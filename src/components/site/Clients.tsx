@@ -1,12 +1,14 @@
 import { Star } from "lucide-react";
 
 const clients = [
-  { name: "GREIF", color: "text-[#62B58F]", font: "font-sans font-bold text-4xl tracking-tighter" },
   { name: "Infosys", color: "text-[#007CC3]", font: "font-sans font-medium text-4xl tracking-tight" },
-  { name: "MUFG", color: "text-[#D3202A]", font: "font-sans font-bold text-4xl tracking-widest", prefix: "O" },
-  { name: "ONCOR.", color: "text-[#D37373]", font: "font-serif font-bold text-4xl tracking-tight" },
-  { name: "OPTUM", color: "text-[#E87722]", font: "font-sans font-semibold text-3xl tracking-wide", prefix: "❖" },
-  { name: "PAPA JOHN'S", color: "text-[#D3202A]", font: "font-sans font-black text-3xl tracking-tighter" },
+  { name: "Deloitte", color: "text-black", font: "font-serif font-bold text-4xl tracking-tighter" },
+  { name: "TCS", color: "text-[#1175B8]", font: "font-sans font-bold text-4xl tracking-widest" },
+  { name: "Accenture", color: "text-black", font: "font-sans font-black text-4xl" },
+  { name: "Cognizant", color: "text-[#000048]", font: "font-sans font-bold text-4xl tracking-tight" },
+  { name: "Wipro", color: "text-[#E21A22]", font: "font-sans font-bold text-4xl tracking-wide" },
+  { name: "Capgemini", color: "text-[#0070AD]", font: "font-sans font-black text-4xl tracking-tighter" },
+  { name: "IBM", color: "text-[#0530AD]", font: "font-serif font-black text-4xl tracking-widest" },
 ];
 
 const Clients = () => {
@@ -38,7 +40,7 @@ const Clients = () => {
           {duplicatedClients.map((client, idx) => (
             <div 
               key={idx} 
-              className="mx-12 md:mx-20 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="mx-8 md:mx-12 flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
             >
               <div className="flex items-center gap-2">
                 {client.prefix && (
