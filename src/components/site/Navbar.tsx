@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/bridgeiq-logo.png";
+import logo from "@/assets/bridgeiq-logo-new.jpeg";
 
 const links = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
   { href: "#about", label: "About" },
+  { href: "#advantages", label: "Advantages" },
   { href: "#why", label: "Why Us" },
   { href: "#contact", label: "Contact" },
 ];
@@ -24,16 +25,16 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
-        scrolled ? "glass-card border-b border-border/60" : "bg-transparent"
+        scrolled ? "bg-white shadow-sm border-b border-border/60" : "bg-white"
       }`}
     >
       <nav className="container mx-auto flex h-20 items-center justify-between">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logo} alt="BridgeIQ Technologies logo" className="h-16 w-auto" />
-          <span className="hidden sm:block font-display font-semibold text-lg tracking-tight">
-            <span className="text-gradient">BridgeIQ</span>
-            <span className="text-muted-foreground text-xs ml-2 font-mono uppercase">Technologies</span>
-          </span>
+        <a href="#home" className="flex items-center">
+          <img 
+            src={logo} 
+            alt="BridgeIQ Technologies logo" 
+            className="h-24 md:h-28 w-auto mix-blend-multiply object-contain scale-125 -ml-8" 
+          />
         </a>
 
         <ul className="hidden md:flex items-center gap-8">

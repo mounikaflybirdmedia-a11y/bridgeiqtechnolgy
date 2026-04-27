@@ -1,5 +1,5 @@
 import { Linkedin } from "lucide-react";
-import logo from "@/assets/bridgeiq-logo.png";
+import logo from "@/assets/bridgeiq-logo-new.jpeg";
 
 const Footer = () => {
   return (
@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-10 mb-12">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3">
-              <img src={logo} alt="BridgeIQ Technologies" className="h-16 w-auto" />
-              <span className="font-display font-semibold text-lg">
-                <span className="text-gradient">BridgeIQ</span>
-                <span className="text-muted-foreground text-xs ml-2 font-mono uppercase">Technologies</span>
-              </span>
+            <div className="flex items-center">
+              <img 
+                src={logo} 
+                alt="BridgeIQ Technologies" 
+                className="h-28 w-auto mix-blend-multiply object-contain scale-125 origin-left -ml-4" 
+              />
             </div>
             <p className="text-muted-foreground text-sm mt-4 max-w-md leading-relaxed">
               A trusted partner in US IT staffing and workforce solutions — bridging
@@ -21,10 +21,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-mono text-xs uppercase tracking-widest text-primary mb-4">Explore</h4>
+            <h4 className="text-xs uppercase tracking-widest text-primary font-semibold mb-4">Explore</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="#services" className="text-muted-foreground hover:text-primary transition-smooth">Services</a></li>
               <li><a href="#about" className="text-muted-foreground hover:text-primary transition-smooth">About</a></li>
+              <li><a href="#advantages" className="text-muted-foreground hover:text-primary transition-smooth">Advantages</a></li>
               <li><a href="#why" className="text-muted-foreground hover:text-primary transition-smooth">Why Us</a></li>
               <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-smooth">Contact</a></li>
             </ul>

@@ -8,28 +8,28 @@ const Hero = () => {
       {/* Ambient background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-background" />
-        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="absolute inset-0 grid-bg opacity-20" />
       </div>
 
       {/* Floating glow orbs */}
-      <div className="absolute top-1/3 -left-20 w-72 h-72 rounded-full bg-primary/20 blur-3xl animate-pulse-glow" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-secondary/20 blur-3xl animate-pulse-glow" />
+      <div className="absolute top-1/3 -left-20 w-72 h-72 rounded-full bg-primary/10 blur-3xl animate-pulse-glow" />
+      <div className="absolute bottom-1/4 -right-20 w-96 h-96 rounded-full bg-secondary/10 blur-3xl animate-pulse-glow" />
 
       <div className="container mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: copy */}
           <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card mb-8 animate-fade-up">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 mb-8 animate-fade-up">
               <Sparkles className="h-4 w-4 text-primary" />
-              <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                US IT Staffing & Workforce Solutions
+              <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+                US IT Staffing &amp; Workforce Solutions
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6 animate-fade-up" style={{ animationDelay: "0.1s" }}>
-              Hiring the <span className="text-gradient">right talent</span>,
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.15] mb-6 animate-fade-up text-foreground" style={{ animationDelay: "0.1s" }}>
+              Helping US Companies Hire Top <span className="text-gradient">AI & Cloud Talent</span>
               <br />
-              made simple.
+              — Faster & Smarter.
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
@@ -60,25 +60,26 @@ const Hero = () => {
 
           {/* Right: hero image */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.35s" }}>
-            <div className="relative rounded-3xl overflow-hidden border border-border/60 shadow-glow">
+            <div className="relative rounded-3xl overflow-hidden border border-primary/20 shadow-glow">
               <img
                 src={heroBg}
-                alt="Diverse team of IT professionals shaking hands during a successful hiring meeting"
+                alt="Diverse team of IT professionals collaborating in a modern office"
                 width={1920}
                 height={1280}
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-background/40 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-transparent" />
             </div>
 
-            {/* Floating stat card */}
-            <div className="absolute -bottom-6 -left-6 glass-card rounded-2xl p-5 border border-border/60 shadow-glow hidden sm:block">
-              <div className="text-3xl font-bold text-gradient font-display">500+</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-mono">Successful Placements</div>
+            {/* Floating stat card — bottom left */}
+            <div className="absolute -bottom-6 -left-6 card-elevated rounded-2xl p-5 border border-primary/20 shadow-glow hidden sm:block">
+              <div className="text-3xl font-bold text-gradient">500+</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Successful Placements</div>
             </div>
-            <div className="absolute -top-6 -right-6 glass-card rounded-2xl p-5 border border-border/60 shadow-glow hidden sm:block">
-              <div className="text-3xl font-bold text-gradient font-display">98%</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-mono">Client Retention</div>
+            {/* Floating stat card — top right */}
+            <div className="absolute -top-6 -right-6 card-elevated rounded-2xl p-5 border border-secondary/30 shadow-glow-purple hidden sm:block">
+              <div className="text-3xl font-bold text-gradient-purple">98%</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">Client Retention</div>
             </div>
           </div>
         </div>
@@ -86,14 +87,14 @@ const Hero = () => {
         {/* Stat strip */}
         <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fade-up" style={{ animationDelay: "0.4s" }}>
           {[
-            { k: "500+", v: "Placements" },
-            { k: "98%", v: "Client Retention" },
-            { k: "48h", v: "Avg. Submission" },
-            { k: "50", v: "US States Served" },
+            { k: "500+", v: "Placements", grad: "text-gradient" },
+            { k: "98%", v: "Client Retention", grad: "text-gradient-purple" },
+            { k: "48h", v: "Avg. Submission", grad: "text-gradient" },
+            { k: "50", v: "US States Served", grad: "text-gradient-purple" },
           ].map((s) => (
-            <div key={s.v} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-gradient font-display">{s.k}</div>
-              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1 font-mono">{s.v}</div>
+            <div key={s.v} className="text-center card-elevated rounded-2xl p-5 border border-border hover:border-primary/40 transition-smooth hover:shadow-glow">
+              <div className={`text-3xl md:text-4xl font-bold ${s.grad}`}>{s.k}</div>
+              <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{s.v}</div>
             </div>
           ))}
         </div>

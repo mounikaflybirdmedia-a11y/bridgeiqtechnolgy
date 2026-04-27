@@ -1,69 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* BridgeIQ Technologies — Technical, futuristic, trustworthy */
+/*
+  BridgeIQ Technologies — Light Professional Theme
+  Inspired by sismos-solutions.com
+  Palette:
+    Background : White / off-white  #ffffff / #f6f8fc
+    Primary    : Teal-Blue          hsl(199 85% 42%)
+    Secondary  : Purple-Violet      hsl(274 55% 48%)
+    Text       : Dark Charcoal      hsl(222 30% 18%)
+    Muted text : Mid Gray           hsl(222 12% 52%)
+    Cards      : White              #ffffff
+    Border     : Light gray         hsl(220 20% 90%)
+*/
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    --background: 210 30% 97%;
+    --foreground: 222 30% 18%;
 
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 30% 18%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 30% 18%;
 
-    /* Brand cyan */
-    --primary: 187 95% 55%;
-    --primary-foreground: 222 47% 6%;
-    --primary-glow: 187 95% 65%;
+    /* Teal-Blue — primary (like Sismos service link colour) */
+    --primary: 199 85% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 199 85% 52%;
 
-    /* Brand purple */
-    --secondary: 262 83% 65%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary mapped to Primary (Blue) for single-color site */
+    --secondary: 199 85% 42%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 30% 14%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 220 20% 93%;
+    --muted-foreground: 222 12% 48%;
 
-    --accent: 262 83% 65%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 199 85% 42%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 52%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 32% 18%;
-    --input: 217 32% 18%;
-    --ring: 187 95% 55%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 199 85% 42%;
 
     --radius: 0.75rem;
 
-    /* Brand gradients */
-    --gradient-brand: linear-gradient(135deg, hsl(187 95% 55%) 0%, hsl(262 83% 65%) 100%);
-    --gradient-brand-soft: linear-gradient(135deg, hsl(187 95% 55% / 0.15) 0%, hsl(262 83% 65% / 0.15) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(222 47% 6% / 0.6) 0%, hsl(222 47% 6% / 0.95) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(222 47% 11%) 0%, hsl(222 47% 8%) 100%);
-    --gradient-text: linear-gradient(135deg, hsl(187 95% 65%) 0%, hsl(262 83% 70%) 100%);
+    /* Gradients */
+    --gradient-brand: linear-gradient(135deg, hsl(199 85% 42%) 0%, hsl(199 85% 56%) 100%);
+    --gradient-brand-soft: linear-gradient(135deg, hsl(199 85% 42% / 0.12) 0%, hsl(199 85% 56% / 0.08) 100%);
+    --gradient-purple: linear-gradient(135deg, hsl(199 85% 42%) 0%, hsl(199 85% 56%) 100%);
+    --gradient-purple-soft: linear-gradient(135deg, hsl(199 85% 42% / 0.12) 0%, hsl(199 85% 56% / 0.08) 100%);
+    --gradient-hero: linear-gradient(160deg, hsl(210 30% 97%) 0%, hsl(199 60% 92%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 30% 98%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(199 85% 38%) 0%, hsl(199 85% 52%) 100%);
+    --gradient-text-purple: linear-gradient(135deg, hsl(199 85% 38%) 0%, hsl(199 85% 52%) 100%);
 
-    /* Shadows & glows */
-    --shadow-glow: 0 0 60px hsl(187 95% 55% / 0.25);
-    --shadow-glow-purple: 0 0 60px hsl(262 83% 65% / 0.25);
-    --shadow-elevated: 0 20px 60px -20px hsl(222 47% 2% / 0.8);
-    --shadow-card: 0 8px 32px hsl(222 47% 2% / 0.4);
+    /* Shadows */
+    --shadow-glow: 0 4px 30px hsl(199 85% 42% / 0.2);
+    --shadow-glow-purple: 0 4px 30px hsl(199 85% 42% / 0.2);
+    --shadow-elevated: 0 8px 40px -8px hsl(222 30% 18% / 0.12);
+    --shadow-card: 0 2px 16px hsl(222 30% 18% / 0.08);
+    --shadow-card-hover: 0 8px 32px hsl(199 85% 42% / 0.15);
 
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 187 95% 55%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 222 47% 12%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 32% 18%;
-    --sidebar-ring: 187 95% 55%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 30% 18%;
+    --sidebar-primary: 199 85% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 93%;
+    --sidebar-accent-foreground: 222 30% 18%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 199 85% 42%;
   }
 }
 
@@ -78,24 +93,18 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
-    background-image:
-      radial-gradient(ellipse 80% 50% at 50% -20%, hsl(187 95% 55% / 0.15), transparent),
-      radial-gradient(ellipse 60% 50% at 80% 110%, hsl(262 83% 65% / 0.12), transparent);
-    background-attachment: fixed;
+    font-family: 'Poppins', system-ui, sans-serif;
   }
 
   h1, h2, h3, h4, h5 {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    letter-spacing: -0.02em;
-  }
-
-  .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
+
+  /* Text gradients */
   .text-gradient {
     background: var(--gradient-text);
     -webkit-background-clip: text;
@@ -103,65 +112,99 @@
     background-clip: text;
   }
 
+  .text-gradient-purple {
+    background: var(--gradient-text-purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Background helpers */
   .bg-gradient-brand {
     background: var(--gradient-brand);
+  }
+
+  .bg-gradient-brand-soft {
+    background: var(--gradient-brand-soft);
+  }
+
+  .bg-gradient-purple {
+    background: var(--gradient-purple);
+  }
+
+  .bg-gradient-purple-soft {
+    background: var(--gradient-purple-soft);
   }
 
   .bg-gradient-card {
     background: var(--gradient-card);
   }
 
+  /* Cards */
+  .card-elevated {
+    background: hsl(var(--card));
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Sismos-style clean white card with hover */
+  .service-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s var(--transition-smooth);
+  }
+  .service-card:hover {
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-4px);
+  }
+
+  /* Glass card — subtle frosted white */
   .glass-card {
-    @apply border border-border/60 backdrop-blur-xl;
-    background: linear-gradient(145deg, hsl(222 47% 11% / 0.7) 0%, hsl(222 47% 8% / 0.5) 100%);
+    background: hsl(0 0% 100% / 0.85);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-card);
   }
 
-  .glow-border {
-    position: relative;
-  }
-  .glow-border::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    padding: 1px;
-    background: var(--gradient-brand);
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
+  /* Grid background dots/lines */
   .grid-bg {
     background-image:
-      linear-gradient(hsl(217 32% 18% / 0.4) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(217 32% 18% / 0.4) 1px, transparent 1px);
+      linear-gradient(hsl(220 20% 88% / 0.6) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(220 20% 88% / 0.6) 1px, transparent 1px);
     background-size: 48px 48px;
+  }
+
+  /* Decorative circle blob like Sismos */
+  .blob-circle {
+    border-radius: 50%;
+    background: hsl(199 85% 42% / 0.08);
+    filter: blur(2px);
   }
 }
 
 @layer utilities {
-  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-glow        { box-shadow: var(--shadow-glow); }
   .shadow-glow-purple { box-shadow: var(--shadow-glow-purple); }
-  .shadow-elevated { box-shadow: var(--shadow-elevated); }
-  .transition-smooth { transition: all 0.3s var(--transition-smooth); }
+  .shadow-elevated    { box-shadow: var(--shadow-elevated); }
+  .shadow-card        { box-shadow: var(--shadow-card); }
+  .transition-smooth  { transition: all 0.3s var(--transition-smooth); }
 
   @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50%      { transform: translateY(-10px); }
   }
   .animate-float { animation: float 6s ease-in-out infinite; }
 
   @keyframes pulse-glow {
-    0%, 100% { opacity: 0.6; }
-    50% { opacity: 1; }
+    0%, 100% { opacity: 0.5; }
+    50%      { opacity: 0.9; }
   }
   .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
 
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
   }
   .animate-fade-up { animation: fade-up 0.7s var(--transition-smooth) both; }
 }
