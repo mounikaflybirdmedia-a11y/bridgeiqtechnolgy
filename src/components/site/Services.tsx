@@ -1,7 +1,7 @@
 import { UserSearch, Briefcase, Globe2, Cpu, ArrowUpRight } from "lucide-react";
-import recruitmentImg from "@/assets/service-recruitment-v2.png";
+import recruitmentImg from "@/assets/service-recruitment-v3.png";
 import consultingImg from "@/assets/service-consulting.png";
-import outsourcingImg from "@/assets/service-outsourcing.png";
+import outsourcingImg from "@/assets/service-outsourcing-v2.png";
 import technologyImg from "@/assets/service-technology.png";
 
 const services = [
