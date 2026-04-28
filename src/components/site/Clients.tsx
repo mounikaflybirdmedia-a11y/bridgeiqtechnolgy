@@ -1,14 +1,12 @@
 import { Star } from "lucide-react";
 
 const clients = [
-  { name: "Infosys", color: "text-[#007CC3]", font: "font-sans font-medium text-4xl tracking-tight" },
-  { name: "Deloitte", color: "text-black", font: "font-serif font-bold text-4xl tracking-tighter" },
-  { name: "TCS", color: "text-[#1175B8]", font: "font-sans font-bold text-4xl tracking-widest" },
-  { name: "Accenture", color: "text-black", font: "font-sans font-black text-4xl" },
-  { name: "Cognizant", color: "text-[#000048]", font: "font-sans font-bold text-4xl tracking-tight" },
-  { name: "Wipro", color: "text-[#E21A22]", font: "font-sans font-bold text-4xl tracking-wide" },
-  { name: "Capgemini", color: "text-[#0070AD]", font: "font-sans font-black text-4xl tracking-tighter" },
-  { name: "IBM", color: "text-[#0530AD]", font: "font-serif font-black text-4xl tracking-widest" },
+  { name: "E*TRADE", color: "text-[#6633CC]", font: "font-sans font-black text-4xl tracking-tight" },
+  { name: "DTCC", color: "text-[#003087]", font: "font-sans font-bold text-4xl tracking-widest" },
+  { name: "TRAVELERS", color: "text-[#C8102E]", font: "font-serif font-bold text-4xl tracking-tight" },
+  { name: "Abbott", color: "text-[#0079C2]", font: "font-sans font-black text-4xl tracking-tighter" },
+  { name: "Albertsons", color: "text-[#003087]", font: "font-sans font-bold text-4xl tracking-tight" },
+  { name: "Fiserv", color: "text-[#FF6600]", font: "font-sans font-black text-4xl tracking-tighter" },
 ];
 
 const Clients = () => {
